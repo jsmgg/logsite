@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div 总人数：#{list.length}
+  div 总条数：#{total}
+  table
+    tr
+      th url
+      th code
+      th userId
+      th token
+      th model
+      th 小程序版本
+      th sdk版本
+      th 微信版本
+      th 报错时间
+      th 错误信息
+    each item,index in list
+      tr
+        td!=item.url
+        td!=item.code
+        td!=item.userId
+        td!=item.token
+        td!=item.model
+        td!=item.appletVersion
+        td!=item.SDKVersion
+        td!=item.version
+        td!=item._t
+        td!=item.serverData
